@@ -8,8 +8,15 @@
 body {
     font-family: 'Lato', sans-serif;
     color: #333;
-    background-color: #fcfcfc;
     line-height: 1.6;
+    
+    /* 1. Mobile Settings: Covers the whole phone screen */
+    background-image: url('wedding-photo.jpg');
+    background-size: cover; 
+    background-position: center top; /* Keeps faces visible */
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-color: #edece8; /* Soft background color */
 }
 
 h1, h2, h3 {
@@ -193,11 +200,22 @@ footer p {
 }
 
 /* --- Responsive Adjustments --- */
+
+/* 1. Mobile Settings */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
     }
     .events-grid {
         flex-direction: column;
+    }
+}
+
+/* 2. Laptop/Desktop Settings */
+@media (min-width: 1024px) {
+    body {
+        /* 'contain' ensures the entire image fits on the screen without scrolling */
+        background-size: contain; 
+        background-position: center center;
     }
 }
