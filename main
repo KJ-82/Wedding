@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelly & Putri | January 16, 2027</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for an elegant wedding look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Kelly & Putri </h1>
+            <p class="date-location">Saturday, January 16, 2027• Perdido Key, FL</p>
+            <p id="countdown" class="countdown"></p>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="navigation">
+        <button class="tab-link active" onclick="openTab(event, 'home')">Home</button>
+        <button class="tab-link" onclick="openTab(event, 'lodging')">Lodging</button>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="content-container">
+        
+        <!-- HOME TAB -->
+        <section id="home" class="tab-content active-tab">
+            <div class="intro-section">
+                <h2>Wedding Time</h2>
+                <p class="subtitle">4 p.m. in the afternoon</p>
+                <p><strong>Attire:</strong> Casual</p>
+                <p class="note">We cannot wait to celebrate with each and every one of you! Children are welcomed!</p>
+            </div>
+
+            <div class="events-grid">
+                <!-- Ceremony Card -->
+                <div class="event-card">
+                    <p class="time">4 PM</p>
+                    <h3>Ceremony</h3>
+                    <p class="location-name">LOCATION TBD</p>
+                    <p class="address">TBD</p>
+                </div>
+
+                <!-- Reception Card -->
+                <div class="event-card">
+                    <p class="time">7:30 PM – 11:30 PM</p>
+                    <h3>Reception</h3>
+                    <p class="location-name">TBD</p>
+                    <p class="address">LOCATION TBD</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LODGING TAB -->
+        <section id="lodging" class="tab-content">
+            <div class="intro-section">
+                <h2>Lodging</h2>
+                <p class="subtitle">Accommodations for our out-of-town guests.</p>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card">
+                    <h3>Hotel Block</h3>
+                    <p class="address" style="margin-top: 15px;">
+                        <em>More details regarding hotel blocks and booking links will be added here soon as we get closer to the date. Please check back!</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h2>M&G</h2>
+        <p>01.16.2027</p>
+    </footer>
+
+    <!-- Link to the external JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
