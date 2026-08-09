@@ -21,7 +21,7 @@ function openTab(evt, tabName) {
 }
 
 // --- Countdown Timer Logic ---
-const weddingDate = new Date("October 16, 2026 18:30:00").getTime();
+const weddingDate = new Date("January 16, 2026 16:00:00").getTime();
 
 const countdownTimer = setInterval(function() {
     const now = new Date().getTime();
