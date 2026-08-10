@@ -247,13 +247,14 @@ font-size: 0.9rem;
 
 }
 
-/* --- RSVP Button --- */
+/* --- RSVP Buttons --- */
 
 .rsvp-section {
     display: flex;
     justify-content: center;
     padding: 20px 0;
     background-color: #fff;
+    gap: 30px;
 }
 
 .rsvp-button {
