@@ -69,13 +69,15 @@ Attending: Yes / No
 
 Thank you!`;
 
+    // FIX: Convert standard newlines to carriage return + line feed for mobile clients
+    const mobileSafeBody = body.replace(/\r?\n/g, '\r\n');
+
     // Create the email link
     const mailtoLink =
         "mailto:" + email +
         "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+        "&body=" + encodeURIComponent(mobileSafeBody);
 
     // Open the user's email application
     window.location.href = mailtoLink;
 }
-
