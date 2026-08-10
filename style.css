@@ -27,12 +27,6 @@ text-align: center;
 border-bottom: 1px solid #e0e0e0;
 }
 
-/* --- Main Wedding Image --- */
-/*
-The image is now controlled by its actual <img> element.
-It will never exceed 75% of the screen height.
-Width automatically scales proportionally.
-*/
 
 .hero img {
 display: block;
@@ -252,6 +246,34 @@ font-size: 0.9rem;
 }
 ```
 
+}
+
+/* --- RSVP Button --- */
+
+.rsvp-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.rsvp-button {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #777;
+    padding: 10px 5px;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.rsvp-button:hover {
+    color: #2c2c2c;
+    border-bottom: 2px solid #2c2c2c;
 }
 
 /* --- Laptop/Desktop --- */
