@@ -157,14 +157,6 @@ border-radius: 5px;
 font-size: 0.95rem;
 }
 
-
-/* --- Break Line --- */
-.faded-line {
-  border: none;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.15);
-}
-
 /* --- Events Grid --- */
 
 .events-grid {
