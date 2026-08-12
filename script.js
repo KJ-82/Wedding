@@ -63,8 +63,7 @@ function sendRSVP() {
 I would like to RSVP for your wedding on January 16, 2027.
 
 Name:
-Number of Guests:
-Children:
+Number of Guests/Children:
 Attending: Yes / No
 
 Thank you!`;
