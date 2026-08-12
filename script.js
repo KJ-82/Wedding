@@ -66,28 +66,28 @@ function createConfetti() {
 
 // --- RSVP Email Logic ---
 function sendRSVP() {
-  createConfetti();
+    createConfetti();
 
-  const email = "putrisanjunganinsani@gmail.com,kvj8627@yahoo.com";
-  const subject = "RSVP - Kelly & Putri Wedding";
-  const body = `Hi Kelly & Putri,
+    const email = "putrisanjunganinsani@gmail.com,kvj8627@yahoo.com";
+    const subject = "RSVP - Kelly & Putri Wedding";
 
-I would like to RSVP for your wedding on January 16, 2027.
+    const bodyLines = [
+        "Hi Kelly & Putri,",
+        "",
+        "I would like to RSVP for your wedding on January 16, 2027.",
+        "",
+        "Name:",
+        "Number of Guests/Children:",
+        "Attending: Yes / No",
+        "",
+        "Thank you!"
+    ];
 
-Name:
-Number of Guests/Children:
-Attending: Yes / No
+    // Encode each line individually and join with explicit line breaks for iOS compatibility
+    const encodedBody = bodyLines.map(line => encodeURIComponent(line)).join("%0D%0A");
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodedBody}`;
 
-Thank you!`;
-
-  const mobileSafeBody = body.replace(/\r?\n/g, '\r\n');
-
-  const mailtoLink =
-    "mailto:" + email +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(mobileSafeBody);
-
-  setTimeout(() => {
-    window.location.href = mailtoLink;
-  }, 100);
+    setTimeout(() => {
+        window.location.href = mailtoLink;
+    }, 100);
 }
