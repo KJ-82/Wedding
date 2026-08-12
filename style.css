@@ -167,13 +167,13 @@ justify-content: center;
 }
 
 .event-card {
-background: #fff;
+background: ##f4feff;
 padding: 40px;
-border: 1px solid #eaeaea;
+/*border: 1px solid #eaeaea;*/
 border-radius: 8px;
 flex: 1 1 300px;
 text-align: center;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+/*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);*/
 }
 
 .event-card h3 {
