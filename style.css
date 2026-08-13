@@ -376,3 +376,9 @@ footer p {
   color: #666;
   font-size: 0.95rem;
 }
+
+.qr-code .address {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
