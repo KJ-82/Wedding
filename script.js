@@ -64,6 +64,28 @@ function createConfetti() {
   }
 }
 
+// --- Money Logic ---
+function createMoney() {
+  for (let i = 0; i < 100; i++) {
+    const money = document.createElement('div');
+    money.classList.add('money-piece');
+
+    money.textContent = '💵';
+
+    money.style.left = Math.random() * 100 + 'vw';
+    money.style.fontSize = (Math.random() * 15 + 20) + 'px';
+    money.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    money.style.animationDelay = (Math.random() * 1.5) + 's';
+    money.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+    document.body.appendChild(money);
+
+    setTimeout(() => {
+      money.remove();
+    }, 6500);
+  }
+}
+
 // --- RSVP Email Logic ---
 function sendRSVP() {
     createConfetti();
