@@ -13,7 +13,9 @@ body {
   background-color: #f4feff;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
 }
@@ -25,16 +27,6 @@ h1, h2, h3 {
   padding: 60px 20px;
   text-align: center;
   border-bottom: 1px solid #e0e0e0;
-}
-
-.hero img {
-  display: block;
-  max-height: 75vh;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  margin: 0 auto 30px auto;
 }
 
 /* --- Hero Text --- */
@@ -95,7 +87,7 @@ h1, h2, h3 {
   border-bottom: 2px solid #2c2c2c;
 }
 
-/* --- Photo Slideshow --- */
+/* --- Wedding Photo Slideshow --- */
 
 .slideshow {
   position: relative;
@@ -153,6 +145,7 @@ h1, h2, h3 {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -248,29 +241,6 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* --- Responsive Adjustments --- */
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 40px 15px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero img {
-    max-height: 75vh;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-  }
-
-  .events-grid {
-    flex-direction: column;
-  }
-}
-
 /* --- RSVP Buttons --- */
 
 .rsvp-section {
@@ -300,17 +270,6 @@ footer p {
   border-bottom: 2px solid #2c2c2c;
 }
 
-/* --- Desktop Styles --- */
-
-@media (min-width: 769px) {
-  .hero img {
-    max-height: 75vh;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-  }
-}
-
 /* --- Confetti Animation --- */
 
 .confetti-piece {
@@ -328,8 +287,46 @@ footer p {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
   }
+
   100% {
     transform: translateY(110vh) rotate(720deg);
     opacity: 0;
+  }
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .slideshow {
+    width: 95%;
+  }
+
+  .events-grid {
+    flex-direction: column;
+  }
+
+  .navigation {
+    gap: 20px;
+  }
+
+  .rsvp-section {
+    gap: 20px;
+  }
+}
+
+/* --- Desktop Styles --- */
+
+@media (min-width: 769px) {
+  .slideshow {
+    width: 75%;
+    max-width: 1200px;
   }
 }
