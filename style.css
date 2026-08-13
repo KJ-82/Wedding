@@ -305,7 +305,7 @@ footer p {
   animation: fall linear forwards;
 }
 
-@keyframes moneyFall {
+@keyframes fall {
   0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
