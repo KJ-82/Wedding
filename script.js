@@ -109,5 +109,5 @@ function showNextPhoto() {
     photos[currentPhoto].classList.add("active-photo");
 }
 
-// Change photo every 3 seconds
-setInterval(showNextPhoto, 3000);
+// Change photo every 4.5 seconds
+setInterval(showNextPhoto, 4500);
