@@ -377,8 +377,10 @@ footer p {
   font-size: 0.95rem;
 }
 
+.qr-code .location-name {
+  margin-top: 20px;
+}
+
 .qr-code .address {
-  color: #666;
-  font-size: 0.95rem;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
