@@ -69,15 +69,15 @@ function createMoney() {
   for (let i = 0; i < 100; i++) {
     const money = document.createElement('div');
     money.classList.add('money-piece');
-
     money.textContent = '💵';
-
     money.style.left = Math.random() * 100 + 'vw';
+
+    // Start somewhere above the visible screen
+    money.style.top = -(Math.random() * 300 + 100) + 'px';
     money.style.fontSize = (Math.random() * 15 + 20) + 'px';
     money.style.animationDuration = (Math.random() * 3 + 2) + 's';
-    money.style.animationDelay = (Math.random() * 1.5) + 's';
-    money.style.transform = `rotate(${Math.random() * 360}deg)`;
-
+    money.style.animationDelay = (Math.random() * 1.1) + 's';
+    
     document.body.appendChild(money);
 
     setTimeout(() => {
