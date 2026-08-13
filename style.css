@@ -297,10 +297,12 @@ footer p {
 /* --- Money Animation --- */
 .money-piece {
   position: fixed;
-  top: -50px;
+  top: -20px;
+  width: 10px;
+  height: 15px;
   z-index: 9999;
   pointer-events: none;
-  animation: moneyFall linear forwards;
+  animation: fall linear forwards;
 }
 
 @keyframes moneyFall {
