@@ -91,3 +91,23 @@ function sendRSVP() {
         window.location.href = mailtoLink;
     }, 100);
 }
+
+
+// --- Wedding Photo Slideshow ---
+
+const photos = document.querySelectorAll(".slideshow .images");
+let currentPhoto = 0;
+
+function showNextPhoto() {
+    // Hide current photo
+    photos[currentPhoto].classList.remove("active-photo");
+
+    // Move to next photo
+    currentPhoto = (currentPhoto + 1) % photos.length;
+
+    // Show next photo
+    photos[currentPhoto].classList.add("active-photo");
+}
+
+// Change photo every 3 seconds
+setInterval(showNextPhoto, 3000);
