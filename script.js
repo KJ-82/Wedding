@@ -77,7 +77,6 @@ function createMoney() {
     money.style.fontSize = (Math.random() * 15 + 20) + 'px';
     money.style.animationDuration = (Math.random() * 3 + 2) + 's';
     money.style.animationDelay = (Math.random() * 1.1) + 's';
-    
     document.body.appendChild(money);
 
     setTimeout(() => {
