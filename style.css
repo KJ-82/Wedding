@@ -330,3 +330,49 @@ footer p {
     max-width: 1200px;
   }
 }
+
+
+
+/* --- QR Code Cards --- */
+
+.qr-code {
+  background: #f4feff;
+  padding: 40px;
+  border-radius: 8px;
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.qr-code p {
+  margin: 0;
+}
+
+.qr-code strong {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.qr-code .qr {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 20px auto;
+}
+
+.qr-code a {
+  font-family: 'Lato', sans-serif;
+  color: #666;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.qr-code a:hover {
+  color: #2c2c2c;
+}
+
+.qr-code i {
+  color: #666;
+  font-size: 0.95rem;
+}
