@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelly & Putri | January 16, 2027</title>
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for an elegant wedding look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -24,28 +22,28 @@
 
     <!-- Navigation Tabs -->
     <nav class="navigation">
-        <button class="tab-link active" onclick="openTab(event, 'home')">Home</button>      
+        <button class="tab-link active" onclick="openTab(event, 'home')">Home</button>
         <button class="tab-link" onclick="openTab(event, 'lodging')">Lodging</button>
         <button class="tab-link" onclick="openTab(event, 'qrcodes')">Honeymoon</button>
     </nav>
 
-    <!-- RSVP Tab -->
+    <!-- RSVP Buttons -->
     <nav class="rsvp-section">
-        <button class="rsvp-button" type="button" onclick="sendRSVP()">RSVP Now</button>
+        <button class="rsvp-button" type="button" onclick="openRSVP()">RSVP Now</button>
         <button class="rsvp-button" type="button" onclick="alert('Do it right meow!')">RSVP Later</button>
     </nav>
-    
-<!-- Main Photo Slideshow -->
-<div class="slideshow">
-    <img src="wedding-photo.jpg" alt="Kelly and Putri" class="images active-photo">
-    <img src="wedding-photo-2.jpg" alt="Kelly and Putri" class="images">
-    <img src="wedding-photo-3.jpg" alt="Kelly and Putri" class="images">
-    <img src="wedding-photo-4.jpg" alt="Kelly and Putri" class="images">
-</div>
-    
+
+    <!-- Main Photo Slideshow -->
+    <div class="slideshow">
+        <img src="wedding-photo.jpg" alt="Kelly and Putri" class="images active-photo">
+        <img src="wedding-photo-2.jpg" alt="Kelly and Putri" class="images">
+        <img src="wedding-photo-3.jpg" alt="Kelly and Putri" class="images">
+        <img src="wedding-photo-4.jpg" alt="Kelly and Putri" class="images">
+    </div>
+
     <!-- Main Content Area -->
     <main class="content-container">
-        
+
         <!-- HOME TAB -->
         <section id="home" class="tab-content active-tab">
             <div class="intro-section">
@@ -55,11 +53,10 @@
                 <p class="note">We cannot wait to celebrate with each and every one of you! Children are welcomed!</p>
             </div>
 
-            <!-- Break -->
             <br>
             <hr class="faded-line">
             <br>
-            
+
             <div class="events-grid">
                 <!-- Ceremony Card -->
                 <div class="event-card">
@@ -108,9 +105,9 @@
                 <div class="qr-code">
                     <p><strong>Venmo</strong></p>
                     <img src="qr-venmo.jpg" alt="" class="qr">
-                  <a href="https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fvenmo.com%2Fu%2FPutrisanjungan&data=05%7C02%7C%7Ce749a6c8f7344c53120908def96d7114%7C12e0b4f33804400891166f1a966e9801%7C0%7C0%7C639222445690842172%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=mysKEguietNmp4T6l0owYG%2FJB1fF6%2F5Qy4ZbTkDzjQA%3D&reserved=0" onclick="createMoney()"><i>Venmo Link</i></a>
+                    <a href="https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fvenmo.com%2Fu%2FPutrisanjungan&data=05%7C02%7C%7Ce749a6c8f7344c53120908def96d7114%7C12e0b4f33804400891166f1a966e9801%7C0%7C0%7C639222445690842172%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=mysKEguietNmp4T6l0owYG%2FJB1fF6%2F5Qy4ZbTkDzjQA%3D&reserved=0" onclick="createMoney()"><i>Venmo Link</i></a>
                 </div>
-                
+
                 <!-- QR Zelle -->
                 <div class="qr-code">
                     <p><strong>Zelle</strong></p>
@@ -128,7 +125,44 @@
         <p>01.16.2027</p>
     </footer>
 
-    <!-- Link to the external JS file -->
+    <!-- RSVP Modal -->
+    <dialog id="rsvpDialog" class="rsvp-dialog">
+        <form id="rsvpForm" method="dialog" novalidate>
+            <button type="button" class="dialog-close" id="rsvpClose" aria-label="Close">&times;</button>
+            <h2>RSVP</h2>
+            <p class="dialog-sub">Kelly & Putri &middot; January 16, 2027</p>
+
+            <label class="field">
+                <span>Your name</span>
+                <input type="text" id="rsvpName" name="name" autocomplete="name" required>
+            </label>
+
+            <fieldset class="field radio-row">
+                <legend>Will you be attending?</legend>
+                <label><input type="radio" name="attending" value="Yes" checked> Accept, duh!!</label>
+                <label><input type="radio" name="attending" value="No"> Regretfully decline</label>
+            </fieldset>
+
+            <fieldset id="attendingFields" class="plain-fieldset">
+                <label class="field">
+                    <span>Total guests (including you and children)</span>
+                    <input type="number" id="guestCount" name="guestCount" min="1" max="10" value="1" required>
+                </label>
+
+                <div id="guestList"></div>
+
+                <label class="field">
+                    <span>Allergies or dietary notes (optional)</span>
+                    <textarea id="rsvpNotes" name="notes" rows="2"></textarea>
+                </label>
+            </fieldset>
+
+            <p id="rsvpError" class="rsvp-error" role="alert" hidden></p>
+
+            <button type="submit" class="submit-btn">Send RSVP</button>
+        </form>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 </html>
