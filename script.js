@@ -1,12 +1,14 @@
 
 // DINNER MENU
 const MENU_OPTIONS = [
-  "Chicken Parmesan",
+  "Chicken Parmesan Pasta",
+  "Gulf Shrimp and Grits (Half Dozen Large Skewered Shrimp)",
   "Shrimp Fra Diavolo (Shrimp Pasta With Mushrooms)",
-  "Zydeco Chicken (Blackend With Spicy Greens & Alfredo)",
+  "Zydeco Chicken Pasta (Blackend With Spicy Greens & Alfredo)",
   "Shrimp Po'Boy",
   "Pecan Fried Catfish",
-  "Cobalt Burger (Blend of Elk, Boar, Bison, & Wagyu)"
+  "Cobalt Burger (Blend of Elk, Boar, Bison, & Wagyu)",
+  "Blackened Tuna Salad"
 ];
 
 const RSVP_EMAILS = "putrisanjunganinsani@gmail.com,kvj8627@yahoo.com";
