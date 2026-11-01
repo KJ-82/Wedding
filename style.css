@@ -270,31 +270,9 @@ footer p {
   border-bottom: 2px solid #2c2c2c;
 }
 
-/* --- Confetti Animation --- */
+/* --- Confetti + Money Animation --- */
 
-.confetti-piece {
-  position: fixed;
-  top: -20px;
-  width: 10px;
-  height: 15px;
-  z-index: 9999;
-  pointer-events: none;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(110vh) rotate(720deg);
-    opacity: 0;
-  }
-}
-
-/* --- Money Animation --- */
+.confetti-piece,
 .money-piece {
   position: fixed;
   top: -20px;
@@ -315,6 +293,148 @@ footer p {
     transform: translateY(110vh) rotate(720deg);
     opacity: 0;
   }
+}
+
+/* --- RSVP Dialog --- */
+
+.rsvp-dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 35px 30px 30px;
+  width: 92%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+  background: #f4feff;
+  color: #333;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.rsvp-dialog::backdrop {
+  background: rgba(44, 44, 44, 0.6);
+}
+
+.rsvp-dialog h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #2c2c2c;
+}
+
+.dialog-sub {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #777;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  color: #2c2c2c;
+}
+
+.field {
+  display: block;
+  margin-bottom: 18px;
+  border: none;
+}
+
+.field > span,
+.field legend {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccd;
+  border-radius: 5px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #2c2c2c;
+}
+
+.radio-row label {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.plain-fieldset {
+  border: none;
+}
+
+.plain-fieldset[hidden] {
+  display: none;
+}
+
+.guest-row {
+  background: #fff;
+  border-radius: 6px;
+  padding: 15px 15px 2px;
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+}
+
+.guest-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+}
+
+.rsvp-error {
+  color: #b00020;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2c2c2c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #555;
 }
 
 /* --- Responsive Adjustments --- */
@@ -353,8 +473,6 @@ footer p {
     max-width: 1200px;
   }
 }
-
-
 
 /* --- QR Code Cards --- */
 
