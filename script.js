@@ -1,11 +1,12 @@
 
 // DINNER MENU
 const MENU_OPTIONS = [
-  "Filet Mignon",
-  "Herb-Roasted Chicken",
-  "Pan-Seared Salmon",
-  "Vegetarian Pasta",
-  "Kids' Meal (12 & under)"
+  "Chicken Parmesan",
+  "Shrimp Fra Diavolo (Shrimp Pasta With Mushrooms)",
+  "Zydeco Chicken (Blackend With Spicy Greens & Alfredo)",
+  "Shrimp Po'Boy",
+  "Pecan Fried Catfish",
+  "Cobalt Burger (Blend of Elk, Boar, Bison, & Wagyu)"
 ];
 
 const RSVP_EMAILS = "putrisanjunganinsani@gmail.com,kvj8627@yahoo.com";
